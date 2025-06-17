@@ -8,7 +8,8 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "generate:feature": "plop feature"
+    "g:feature": "plop feature",
+    "g:component": "plop component"
   },
   "dependencies": {
     "react": "^19.1.0",
