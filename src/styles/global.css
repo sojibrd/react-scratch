@@ -1,0 +1,107 @@
+/* src/styles/global.css */
+
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #232f3e; /* Amazon dark background */
+  color: #fff;
+  line-height: 1.6;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover {
+  color: #febd69;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input,
+select,
+button {
+  font-family: inherit;
+}
+
+/* Scrollbar styling for a modern look */
+::-webkit-scrollbar {
+  width: 8px;
+  background: #232f3e;
+}
+::-webkit-scrollbar-thumb {
+  background: #131921;
+  border-radius: 4px;
+}
+
+/* Mobile-first responsive styles */
+html {
+  font-size: 16px;
+}
+body {
+  min-width: 0;
+  min-height: 100vh;
+}
+
+.container,
+.app-wrapper {
+  width: 100%;
+  max-width: 100vw;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsive typography */
+h1 {
+  font-size: 1.5rem;
+}
+h2 {
+  font-size: 1.25rem;
+}
+h3 {
+  font-size: 1.1rem;
+}
+
+@media (min-width: 600px) {
+  html {
+    font-size: 17px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 900px) {
+  html {
+    font-size: 18px;
+  }
+  .container,
+  .app-wrapper {
+    max-width: 1200px;
+    padding: 0 2rem;
+  }
+}

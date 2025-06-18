@@ -1,0 +1,354 @@
+/* Mobile-first styles */
+.navbar {
+  width: 100%;
+  background: #131921;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+.topBar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 60px;
+  height: 60px;
+  padding: 0 24px;
+  gap: 18px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1000;
+}
+.logo {
+  font-size: 2.1rem;
+  font-weight: bold;
+  color: #ff9900;
+  letter-spacing: -2px;
+  margin-right: 28px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.deliveredTo {
+  margin-right: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 1rem;
+  color: #fff;
+  gap: 0;
+  height: 100%;
+  line-height: 1.1;
+}
+.deliveredTo > div {
+  display: flex;
+  align-items: center;
+  font-size: 0.98rem;
+  margin-bottom: -2px;
+}
+.deliveredTo strong {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-top: -2px;
+}
+.categorySelect {
+  padding: 8px 8px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  background: #f3f3f3;
+  color: #222;
+  font-size: 1rem;
+  height: 40px;
+  min-width: 70px;
+  outline: none;
+  border-right: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+}
+.searchContainer {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+  gap: 0;
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  height: 40px;
+}
+.searchInput {
+  width: 100%;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 0;
+  font-size: 1rem;
+  background: #fff;
+  color: #222;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.searchButton {
+  padding: 0 16px;
+  background: #febd69;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #222;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+.searchButton:hover {
+  background: #f3a847;
+}
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  height: 100%;
+  margin: 0;
+}
+.rightIcons {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-left: auto;
+  height: 100%;
+}
+.accountSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-width: 120px;
+  height: 100%;
+  padding: 0 8px;
+}
+.signIn {
+  font-size: 0.92rem;
+  color: #d6d6d6;
+  font-weight: 400;
+  margin-bottom: 1px;
+  line-height: 1.1;
+}
+.accountLists {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 2px;
+}
+.accountLists:hover {
+  color: #febd69;
+}
+.returnsOrders {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0 8px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+  transition: color 0.2s;
+  height: 100%;
+}
+.returnsOrders span {
+  line-height: 1.1;
+}
+.returnsOrders strong {
+  line-height: 1.1;
+}
+.returnsOrders:hover,
+.returnsOrders:focus-within {
+  color: #febd69;
+}
+.cart {
+  display: flex;
+  align-items: center;
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: #fff;
+  margin-left: 10px;
+  gap: 4px;
+  transition: color 0.2s;
+  height: 100%;
+}
+.cart:hover {
+  color: #febd69;
+}
+.menuBar {
+  background: #232f3e;
+  padding: 6px 4px;
+  overflow-x: auto;
+  display: flex;
+  z-index: 1000;
+}
+.menuList {
+  display: flex;
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.98rem;
+  overflow-x: auto;
+  z-index: 1000;
+  white-space: nowrap;
+}
+.menuList li {
+  cursor: pointer;
+  color: #fff;
+  padding: 6px 8px;
+  border-radius: 3px;
+  transition: background 0.2s, color 0.2s;
+}
+.menuList li:hover {
+  background: #37475a;
+  color: #febd69;
+}
+
+.returnsOrdersMenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #232f3e;
+  color: #fff;
+  min-width: 160px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 0 0 6px 6px;
+  z-index: 100;
+  padding: 8px 0;
+  margin: 0;
+  list-style: none;
+}
+.returnsOrdersMenu li {
+  padding: 10px 18px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.returnsOrdersMenu li:hover {
+  background: #37475a;
+  color: #febd69;
+}
+.returnsOrders:hover .returnsOrdersMenu,
+.returnsOrders:focus-within .returnsOrdersMenu {
+  display: block;
+}
+.dropdownContainer {
+  position: relative;
+}
+
+.dropdownOptions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  display: none;
+}
+
+.dropdownContainer:hover .dropdownOptions {
+  display: block;
+}
+.blurOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.25);
+  /* background: red; */
+  z-index: 1000;
+  backdrop-filter: blur(6px);
+  transition: opacity 0.2s;
+  pointer-events: auto;
+}
+.sidebarBtn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  gap: 5px;
+}
+
+.centerSection {
+  display: flex;
+  flex: 1 1 0;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+  position: relative;
+}
+
+/* Larger screens */
+@media (min-width: 600px) {
+  .topBar {
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 24px;
+    gap: 0;
+  }
+  .logo {
+    margin-bottom: 0;
+    margin-right: 32px;
+    font-size: 2.2rem;
+  }
+  .searchContainer {
+    margin-bottom: 0;
+    max-width: 800px;
+  }
+  .categorySelect,
+  .searchInput,
+  .searchButton {
+    height: 40px;
+    font-size: 1.05rem;
+  }
+  .icons {
+    gap: 28px;
+  }
+  .accountSection {
+    min-width: 120px;
+  }
+  .cart {
+    font-size: 1.12rem;
+    margin-left: 18px;
+  }
+  .menuBar {
+    padding: 8px 24px;
+  }
+  .menuList {
+    gap: 24px;
+    font-size: 1.05rem;
+  }
+}
+@media (max-width: 900px) {
+  .topBar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+    height: auto;
+    min-height: 56px;
+    padding: 8px 8px 0 8px;
+  }
+  .logo,
+  .deliveredTo,
+  .searchContainer,
+  .icons {
+    margin-right: 0;
+    height: auto;
+  }
+}

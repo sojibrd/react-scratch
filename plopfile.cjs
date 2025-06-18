@@ -26,23 +26,38 @@ module.exports = function (plop) {
         name: "name",
         message: "Component name:",
       },
-    ],
-    actions: [
       {
-        type: "add",
-        path: "src/components/{{name}}/{{name}}.tsx",
-        templateFile: "plop-templates/components/component.tsx",
-      },
-      {
-        type: "add",
-        path: "src/components/{{name}}/{{name}}.module.css",
-        templateFile: "plop-templates/components/component.module.css",
-      },
-      {
-        type: "add",
-        path: "src/components/{{name}}/index.ts",
-        templateFile: "plop-templates/components/index.ts",
+        type: "list",
+        name: "componentType",
+        message: "Component type:",
+        choices: [
+          { name: "Common component", value: "common" },
+          { name: "Regular component", value: "regular" },
+        ],
       },
     ],
+    actions: function (data) {
+      const basePath =
+        data.componentType === "common"
+          ? "src/components/common/{{name}}"
+          : "src/components/{{name}}";
+      return [
+        {
+          type: "add",
+          path: `${basePath}/{{name}}.tsx`,
+          templateFile: "plop-templates/components/component.tsx",
+        },
+        {
+          type: "add",
+          path: `${basePath}/{{name}}.module.css`,
+          templateFile: "plop-templates/components/component.module.css",
+        },
+        {
+          type: "add",
+          path: `${basePath}/index.ts`,
+          templateFile: "plop-templates/components/index.ts",
+        },
+      ];
+    },
   });
 };
