@@ -8,7 +8,10 @@ import {
   FaSearch,
   FaUser,
   FaShoppingCart,
+  FaMoon,
+  FaSun,
 } from "react-icons/fa";
+import { ThemeContext } from "../../../theme/ThemeContext";
 
 const AmazonNavbar: React.FC = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -17,6 +20,7 @@ const AmazonNavbar: React.FC = () => {
   const searchContainerRef = useRef<HTMLDivElement>(null);
   const navRef = useRef<HTMLElement>(null);
   const location = useLocation();
+  const { theme, toggleTheme } = React.useContext(ThemeContext);
 
   // Handler for dropdown selection
   const handleDropdownChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -152,6 +156,13 @@ const AmazonNavbar: React.FC = () => {
             </li>
           </ul>
         </div>
+        <button
+          onClick={toggleTheme}
+          style={{ marginLeft: 16 }}
+          aria-label="Toggle theme"
+        >
+          {theme === "light" ? <FaMoon /> : <FaSun />}
+        </button>
       </nav>
     </>
   );

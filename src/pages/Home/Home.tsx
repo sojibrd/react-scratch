@@ -56,13 +56,13 @@ const Home: React.FC = () => {
       <div className={styles.homeGrid}>
         <Suspense fallback={<div>Loading cards...</div>}>
           {cardData.map((card, idx) => {
-            if (card.variant === 1) {
+            if (card.variant === 1 && card.mainImg && card.items) {
               return <CardVariant1 key={idx} {...card} />;
             }
-            if (card.variant === 2) {
+            if (card.variant === 2 && card.items) {
               return <CardVariant2 key={idx} {...card} />;
             }
-            if (card.variant === 3) {
+            if (card.variant === 3 && card.mainImg) {
               return <CardVariant3 key={idx} {...card} />;
             }
             return null;

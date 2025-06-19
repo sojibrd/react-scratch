@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./CardVariant1.module.css";
+import styles from "./cardVariant1.module.css";
 
 interface CardVariant1Props {
   title: string;
