@@ -1,13 +1,9 @@
 import "../theme/light.css";
 import "../theme/dark.css";
-import React, {
-  createContext,
-  useState,
-  useEffect,
-  type ReactNode,
-} from "react";
+import { createContext, useState, useEffect, type ReactNode } from "react";
 
 type Theme = "light" | "dark";
+
 export const ThemeContext = createContext<{
   theme: Theme;
   toggleTheme: () => void;

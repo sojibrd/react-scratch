@@ -119,6 +119,16 @@ const AmazonNavbar: React.FC = () => {
                 <FaShoppingCart style={{ marginRight: 4 }} />
                 <strong>Cart</strong>
               </span>
+
+              <span className={styles.cart}>
+                <button
+                  onClick={toggleTheme}
+                  style={{ marginLeft: 16 }}
+                  aria-label="Toggle theme"
+                >
+                  {theme === "light" ? <FaMoon /> : <FaSun />}
+                </button>
+              </span>
             </div>
           </div>
         </div>
@@ -156,13 +166,6 @@ const AmazonNavbar: React.FC = () => {
             </li>
           </ul>
         </div>
-        <button
-          onClick={toggleTheme}
-          style={{ marginLeft: 16 }}
-          aria-label="Toggle theme"
-        >
-          {theme === "light" ? <FaMoon /> : <FaSun />}
-        </button>
       </nav>
     </>
   );

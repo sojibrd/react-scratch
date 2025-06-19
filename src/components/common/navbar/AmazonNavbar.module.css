@@ -1,8 +1,8 @@
 /* Mobile-first styles */
 .navbar {
   width: 100%;
-  background: #131921;
-  color: #fff;
+  background: var(--navbar-bg, #131921);
+  color: var(--navbar-text, #fff);
   font-family: Arial, sans-serif;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
@@ -37,7 +37,7 @@
   justify-content: center;
   font-size: 1rem;
   color: #fff;
-  gap: 0;
+  gap: 7px;
   height: 100%;
   line-height: 1.1;
 }

@@ -1,4 +1,38 @@
 body.dark {
+  /* Colors */
   --background: #181818;
   --text: #f5f5f5;
+  --primary: #febd69;
+  --card-bg: #232323;
+  --card-text: #f5f5f5;
+  --card-border: #333;
+  --button-bg: #febd69;
+  --button-text: #181818;
+  --input-bg: #232323;
+  --input-text: #f5f5f5;
+  --link-color: #febd69;
+  --link-hover: #fff;
+  --navbar-bg: #232f3e;
+  --navbar-text: #fff;
+
+  /* Typography */
+  --font-family: "Segoe UI", Arial, sans-serif;
+  --font-size-base: 16px;
+  --font-size-lg: 1.25rem;
+  --font-size-sm: 0.9rem;
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 32px;
+
+  /* Borders */
+  --border-radius: 12px;
+  --border-width: 1px;
+  --border-color: var(--card-border);
+
+  /* Animations */
+  --transition-fast: 0.2s;
+  --transition-slow: 0.5s;
 }

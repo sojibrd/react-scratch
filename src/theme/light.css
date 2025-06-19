@@ -1,4 +1,38 @@
 body.light {
+  /* Colors */
   --background: #fff;
   --text: #222;
+  --primary: #007185;
+  --card-bg: #fff;
+  --card-text: #222;
+  --card-border: #e3e3e3;
+  --navbar-bg: #131921;
+  --navbar-text: #fff;
+  --button-bg: #febd69;
+  --button-text: #222;
+  --input-bg: #fff;
+  --input-text: #222;
+  --link-color: #007185;
+  --link-hover: #febd69;
+
+  /* Typography */
+  --font-family: "Segoe UI", Arial, sans-serif;
+  --font-size-base: 16px;
+  --font-size-lg: 1.25rem;
+  --font-size-sm: 0.9rem;
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 32px;
+
+  /* Borders */
+  --border-radius: 12px;
+  --border-width: 1px;
+  --border-color: var(--card-border);
+
+  /* Animations */
+  --transition-fast: 0.2s;
+  --transition-slow: 0.5s;
 }
