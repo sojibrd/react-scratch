@@ -34,25 +34,24 @@
 }
 .homeGrid {
   display: flex;
-  gap: 24px;
+  gap: 25px;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 1400px;
-  margin: 0 auto 40px auto;
+  max-width: 1480px;
+  margin: 0 auto;
   align-items: stretch;
 }
 .homeCard {
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
-  padding: 20px 18px 18px 18px;
-  min-width: 300px;
-  max-width: 340px;
-  flex: 1 1 320px;
+  padding: 0 10px;
+  width: 400px;
   display: flex;
   flex-direction: column;
   margin-bottom: 12px;
   align-items: flex-start;
+  width: 400px;
 }
 .cardTitle {
   font-size: 1.3rem;
