@@ -1,12 +1,17 @@
-import React, { useState, Suspense } from "react";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import styles from "../Home/home.module.css";
-import { carouselData, cardData } from "../../constants";
+import React, { useState } from "react";
+import { carouselData, cardData, cardDataRow2 } from "../../constants";
+import CardGrid from "../../components/common/CardGrid";
+import { Carousel } from "../../components/common";
+import HeroSection from "../../components/common/HeroSection";
 import {
-  CardVariant1,
-  CardVariant2,
-  CardVariant3,
-} from "../../components/cards";
+  popularProductsInWirelessInternationally,
+  newInternationalCustomersCarousel,
+  topPicksBangladeshCarousel,
+  bestSellersClothingCarousel,
+  internationalTopSellersKitchenCarousel,
+  popularBeautyInternationalCarousel,
+  bestSellersSportsOutdoorsCarousel,
+} from "../../constants/carousels";
 
 const Home: React.FC = () => {
   const [current, setCurrent] = useState(0);
@@ -16,58 +21,25 @@ const Home: React.FC = () => {
 
   return (
     <div>
-      <section
-        className={styles.homeHero}
-        style={{
-          background: `linear-gradient(90deg, #fff 0%, ${carouselData[current].bg} 100%)`,
-        }}
-      >
-        <button
-          className={styles.carouselBtn}
-          onClick={prev}
-          aria-label="Previous"
-          type="button"
-        >
-          <FaChevronLeft />
-        </button>
-        <div className={styles.heroContent}>
-          <div>
-            <div className={styles.heroText}>{carouselData[current].title}</div>
-            <div className={styles.heroSub}>
-              {carouselData[current].subtitle}
-            </div>
-          </div>
-          <img
-            className={styles.heroImg}
-            src={carouselData[current].img}
-            alt={carouselData[current].title}
-          />
-        </div>
-        <button
-          className={styles.carouselBtn}
-          onClick={next}
-          aria-label="Next"
-          type="button"
-        >
-          <FaChevronRight />
-        </button>
-      </section>
-
-      <div className={styles.homeGrid}>
-        <Suspense fallback={<div>Loading cards...</div>}>
-          {cardData.map((card, idx) => {
-            if (card.variant === 1 && card.mainImg && card.items) {
-              return <CardVariant1 key={idx} {...card} />;
-            }
-            if (card.variant === 2 && card.items) {
-              return <CardVariant2 key={idx} {...card} />;
-            }
-            if (card.variant === 3 && card.mainImg) {
-              return <CardVariant3 key={idx} {...card} />;
-            }
-            return null;
-          })}
-        </Suspense>
+      {/* Hero Section */}
+      <HeroSection
+        title={carouselData[current].title}
+        subtitle={carouselData[current].subtitle}
+        img={carouselData[current].img}
+        bg={carouselData[current].bg}
+        onPrev={prev}
+        onNext={next}
+      />
+      {/* Main Cards Grid */}
+      <CardGrid data={cardData} />
+      {/* New Section/Row of Cards */}
+      <CardGrid data={cardDataRow2} rowKey="row2-" />
+      {/* Carousel Section */}
+      <div style={{ margin: "32px 0" }}>
+        <Carousel
+          title="Popular products in Wireless internationally"
+          items={popularProductsInWirelessInternationally}
+        />
       </div>
     </div>
   );

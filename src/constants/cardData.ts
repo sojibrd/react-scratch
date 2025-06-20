@@ -1,6 +1,40 @@
 export const cardData = [
   {
     variant: 1,
+    title: "Get your game on",
+    mainImg: {
+      src: "https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/Stores-Gaming/FinalGraphics/Fuji_Gaming_store_Dashboard_card_1x_EN._SY304_CB564799420_.jpg",
+      alt: "Gaming",
+    },
+    link: "#",
+    linkText: "Shop gaming",
+  },
+  {
+    variant: 2,
+    title: "Fashion trends you like",
+    items: [
+      {
+        src: "https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2023/LuxuryStores/Spring-23/GW/Quad_Cards/Spring/LSS23_SPRING_DT_CAT_CARD_2_x1._SY116_CB595261253_.jpg",
+        alt: "Dresses",
+      },
+      {
+        src: "https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2023/LuxuryStores/Spring-23/GW/Quad_Cards/Spring/LSS23_SPRING_DT_CAT_CARD_3_x1._SY116_CB595261253_.jpg",
+        alt: "Knits",
+      },
+      {
+        src: "https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2023/LuxuryStores/Spring-23/GW/Quad_Cards/Spring/LSS23_SPRING_DT_CAT_CARD_1_x1._SY116_CB595261253_.jpg",
+        alt: "Jackets",
+      },
+      {
+        src: "https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2023/LuxuryStores/Spring-23/GW/Quad_Cards/Spring/LSS23_SPRING_DT_CAT_CARD_4_x1._SY116_CB595261253_.jpg",
+        alt: "Jewelry",
+      },
+    ],
+    link: "#",
+    linkText: "Explore more",
+  },
+  {
+    variant: 3,
     title: "Top categories in Kitchen appliances",
     mainImg: {
       src: "https://m.media-amazon.com/images/I/313wAT6Iy2L._SY160_.jpg",
@@ -47,16 +81,9 @@ export const cardData = [
     link: "#",
     linkText: "Discover more in Home",
   },
-  {
-    variant: 3,
-    title: "Get your game on",
-    mainImg: {
-      src: "https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/Stores-Gaming/FinalGraphics/Fuji_Gaming_store_Dashboard_card_1x_EN._SY304_CB564799420_.jpg",
-      alt: "Gaming",
-    },
-    link: "#",
-    linkText: "Shop gaming",
-  },
+];
+
+export const cardDataRow2 = [
   {
     variant: 2,
     title: "Shop Fashion for less",
@@ -80,5 +107,64 @@ export const cardData = [
     ],
     link: "#",
     linkText: "See all deals",
+  },
+  {
+    variant: 2,
+    title: "New home arrivals under $50",
+    items: [
+      {
+        src: "https://images-na.ssl-images-amazon.com/images/G/01/DiscoTec/2024/HomeLifestyle/HomeSummerFlip/Homepage/QuadCards/Home_Flip_Summer_2024_315_HP_NewArrivals_QuadCard_D_01_1x._SY116_CB555960040_.jpg",
+        alt: "Kitchen & Dining",
+      },
+      {
+        src: "https://images-na.ssl-images-amazon.com/images/G/01/DiscoTec/2024/HomeLifestyle/HomeSummerFlip/Homepage/QuadCards/Home_Flip_Summer_2024_316_HP_NewArrivals_QuadCard_D_02_1x._SY116_CB555960040_.jpg",
+        alt: "Home improvement",
+      },
+      {
+        src: "https://images-na.ssl-images-amazon.com/images/G/01/DiscoTec/2024/HomeLifestyle/HomeSummerFlip/Homepage/QuadCards/Home_Flip_Summer_2024_317_HP_NewArrivals_QuadCard_D_03_1x._SY116_CB555960040_.jpg",
+        alt: "Decor",
+      },
+      {
+        src: "https://images-na.ssl-images-amazon.com/images/G/01/DiscoTec/2024/HomeLifestyle/HomeSummerFlip/Homepage/QuadCards/Home_Flip_Summer_2024_318_HP_NewArrivals_QuadCard_D_04_1x._SY116_CB555960040_.jpg",
+        alt: "Bedding & Bath",
+      },
+    ],
+    link: "#",
+    linkText: "Shop the latest from Home",
+  },
+  {
+    variant: 1,
+    title: "Toys under $25",
+    mainImg: {
+      src: "https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2023/EBF23/Fuji_Desktop_Single_image_EBF_1x_v3._SY304_CB573698005_.jpg",
+      alt: "Gaming",
+    },
+    link: "#",
+    linkText: "Shop now",
+  },
+
+  {
+    variant: 2,
+    title: "Refresh your space",
+    items: [
+      {
+        src: "https://images-na.ssl-images-amazon.com/images/G/01/launchpad/2023/Gateway/January/DesktopQuadCat_186x116_LP-HP_B08MYX5Q2W_01.23._SY116_CB619238939_.jpg",
+        alt: "Dining",
+      },
+      {
+        src: "https://images-na.ssl-images-amazon.com/images/G/01/launchpad/2023/Gateway/January/DesktopQuadCat_186x116_home_B08RCCP3HV_01.23._SY116_CB619238939_.jpg",
+        alt: "Home",
+      },
+      {
+        src: "https://images-na.ssl-images-amazon.com/images/G/01/launchpad/2023/Gateway/January/DesktopQuadCat_186x116_kitchen_B0126LMDFK_01.23._SY116_CB619238939_.jpg",
+        alt: "Kitchen",
+      },
+      {
+        src: "https://images-na.ssl-images-amazon.com/images/G/01/launchpad/2023/Gateway/January/DesktopQuadCat_186x116_health-beauty_B07662GN57_01.23._SY116_CB619238939_.jpg",
+        alt: "Health & Beauty",
+      },
+    ],
+    link: "#",
+    linkText: "See more",
   },
 ];

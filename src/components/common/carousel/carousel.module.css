@@ -1,0 +1,108 @@
+.carouselWrapper {
+  position: relative;
+  margin: 2rem 0;
+  padding: 0 1rem;
+}
+.carouselContainer {
+  width: 100%;
+  background: var(--color-surface, #fff);
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  padding: 1rem 0.5rem 1.5rem 0.5rem;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  position: relative;
+}
+.carouselTitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--color-text, #222);
+  padding-left: 1rem;
+  letter-spacing: 0.01em;
+}
+.itemsRow {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 1.2rem;
+  transition: gap 0.2s;
+}
+.carouselItem {
+  min-width: 180px;
+  max-width: 220px;
+  margin: 0;
+  /* background: linear-gradient(
+    135deg,
+    var(--color-surface, #fff) 80%,
+    var(--color-primary, #ffd814) 100%
+  ); */
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  transition: box-shadow 0.2s, transform 0.2s;
+  cursor: pointer;
+}
+.carouselItem:hover {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.13);
+  transform: translateY(-4px) scale(1.03);
+}
+.carouselImg {
+  /* width: 100%;
+  height: 140px; */
+  object-fit: contain;
+  background: #f7f7f7;
+  border-bottom: 1px solid #eee;
+  transition: background 0.2s;
+}
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  background: var(--color-surface, #fff);
+  border: 2px solid var(--color-border, #e0e0e0);
+  border-radius: 8px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.6rem;
+  color: #222;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.13);
+  transition: background 0.2s, box-shadow 0.2s;
+  opacity: 0.92;
+}
+.navButton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.navButton:hover:not(:disabled) {
+  background: #ffe666;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+}
+.navButton[aria-label="Previous"] {
+  left: 0.5rem;
+}
+.navButton[aria-label="Next"] {
+  right: 0.5rem;
+}
+@media (max-width: 900px) {
+  .carouselItem {
+    min-width: 120px;
+    max-width: 150px;
+  }
+  .carouselTitle {
+    font-size: 1.1rem;
+  }
+  .navButton {
+    width: 36px;
+    height: 36px;
+    font-size: 1.2rem;
+  }
+}
