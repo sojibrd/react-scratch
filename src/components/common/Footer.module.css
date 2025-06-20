@@ -1,0 +1,94 @@
+.footer {
+  background: #232f3e;
+  color: #fff;
+  font-size: 0.95rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+}
+.footerLinksSection {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  padding: 2rem 0 1.5rem 0;
+  border-bottom: 1px solid #3a4553;
+}
+.footerLinksSection h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.7rem;
+  font-weight: 600;
+}
+.footerLinksSection ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footerLinksSection li {
+  margin-bottom: 0.5rem;
+  color: #ddd;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.footerLinksSection li:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+.footerBrandRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem 0 1rem 0;
+  border-bottom: 1px solid #3a4553;
+}
+.footerBrandLogo {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  color: #ff9900;
+}
+.footerBrandOptions button {
+  background: #232f3e;
+  color: #fff;
+  border: 1px solid #848688;
+  border-radius: 3px;
+  margin: 0 0.3rem;
+  padding: 0.4rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.footerBrandOptions button:hover {
+  background: #37475a;
+  color: #ff9900;
+}
+.footerBottomLinks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+  padding: 2rem 0 1.5rem 0;
+  font-size: 0.93rem;
+  color: #ddd;
+}
+.footerBottomLinks span {
+  display: inline-block;
+  margin: 0 0.7rem 0.5rem 0;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.footerBottomLinks span:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+@media (max-width: 900px) {
+  .footerLinksSection {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .footerBottomLinks {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
