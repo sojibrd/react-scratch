@@ -23,7 +23,15 @@ const CardVariant1: React.FC<CardVariant1Props> = ({
       {items.map((img) => (
         <div className={styles.cardGridItem} key={img.alt}>
           <img className={styles.cardImg} src={img.src} alt={img.alt} />
-          <div>{img.alt}</div>
+          <div
+            style={{
+              whiteSpace: "nowrap",
+              overflow: "hidden",
+              textOverflow: "ellipsis",
+            }}
+          >
+            {img.alt}
+          </div>
         </div>
       ))}
     </div>

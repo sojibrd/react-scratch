@@ -9,6 +9,8 @@
   flex: 1 1 320px;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
   margin-bottom: 12px;
   align-items: flex-start;
 }
@@ -21,26 +23,41 @@
 .cardGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  margin-bottom: 10px;
+  gap: 8px;
+  margin-bottom: 30px;
+  width: 100%;
 }
 .cardGridItem {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* width: 110px; */
 }
 .cardImg {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
-  margin-bottom: 4px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  background: #f3f3f3;
+}
+.cardGridItem > div {
+  font-size: 14px;
+  color: var(--card-text);
+  margin-top: 2px;
+  text-align: center;
 }
 .cardLink {
   color: var(--link-color);
-  font-size: 0.98rem;
-  margin-top: 8px;
+  font-size: 1rem;
+  margin-top: auto;
+  align-self: flex-start;
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
   text-decoration: none;
   font-weight: 500;
+  display: block;
 }
 .cardLink:hover {
   color: var(--link-hover);
