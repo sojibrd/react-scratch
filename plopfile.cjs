@@ -60,4 +60,34 @@ module.exports = function (plop) {
       ];
     },
   });
+
+  plop.setGenerator("page", {
+    description: "Generate a new page (folder, TSX, CSS, and barrel)",
+    prompts: [
+      {
+        type: "input",
+        name: "name",
+        message: "Page name (e.g. Home, About):",
+        validate: (value) => !!value.length || "Page name is required",
+      },
+    ],
+    actions: [
+      {
+        type: "add",
+        path: "src/pages/{{pascalCase name}}/{{pascalCase name}}.tsx",
+        templateFile: "plop-templates/pages/Page.tsx",
+      },
+      {
+        type: "add",
+        path: "src/pages/{{pascalCase name}}/{{pascalCase name}}.module.css",
+        templateFile: "plop-templates/pages/Page.module.css",
+      },
+      {
+        type: "append",
+        path: "src/pages/index.ts",
+        template:
+          "export { default as {{pascalCase name}} } from './{{pascalCase name}}/{{pascalCase name}}';\n",
+      },
+    ],
+  });
 };

@@ -9,7 +9,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "g:feature": "plop feature",
-    "g:component": "plop component"
+    "g:component": "plop component",
+    "g:page": "plop page"
   },
   "dependencies": {
     "react": "^19.1.0",

@@ -6,7 +6,6 @@ import {
   FaBars,
   FaMapMarkerAlt,
   FaSearch,
-  FaUser,
   FaShoppingCart,
   FaMoon,
   FaSun,
@@ -85,11 +84,27 @@ const AmazonNavbar: React.FC = () => {
                 className={styles.categorySelect}
                 onChange={handleDropdownChange}
               >
-                <option value="all">All</option>
+                <option value="all">All Departments</option>
+                <option value="arts">Arts & Crafts</option>
+                <option value="auto">Automotive</option>
+                <option value="baby">Baby</option>
+                <option value="beauty">Beauty & Personal Care</option>
+                <option value="books">Books</option>
+                <option value="boys-fashion">Boys' Fashion</option>
+                <option value="computers">Computers</option>
+                <option value="deals">Deals</option>
+                <option value="digital-music">Digital Music</option>
                 <option value="electronics">Electronics</option>
-                <option value="fashion">Fashion</option>
-                <option value="mobiles">Mobiles</option>
+                <option value="girls-fashion">Girls' Fashion</option>
+                <option value="health">Health & Household</option>
+                <option value="home">Home & Kitchen</option>
+                <option value="industrial">Industrial & Scientific</option>
+                <option value="kindle">Kindle Store</option>
                 <option value="luggage">Luggage</option>
+                <option value="mens-fashion">Men's Fashion</option>
+                <option value="movies">Movies & TV</option>
+                <option value="music">Music, CDs & Vinyl</option>
+                {/* Add more as needed */}
               </select>
               <input
                 className={styles.searchInput}
@@ -144,25 +159,22 @@ const AmazonNavbar: React.FC = () => {
               </button>
             </li>
             <li>
-              <Link to="/best-sellers">Best Sellers</Link>
+              <Link to="/todays-deals">Todays Deals</Link>
             </li>
             <li>
-              <Link to="/mobiles">Mobiles</Link>
+              <Link to="/registry">Registry</Link>
             </li>
             <li>
-              <Link to="/fashion">Fashion</Link>
+              <Link to="/prime-video">Prime Video</Link>
             </li>
             <li>
-              <Link to="/electronics">Electronics</Link>
+              <Link to="/gift-cards">Gift Cards</Link>
             </li>
             <li>
-              <Link to="/prime">Prime</Link>
+              <Link to="/customer-service">Customer Service</Link>
             </li>
             <li>
-              <Link to="/home-kitchen">Home & Kitchen</Link>
-            </li>
-            <li>
-              <Link to="/amazon-pay">Amazon Pay</Link>
+              <Link to="/sell">Sell</Link>
             </li>
           </ul>
         </div>
