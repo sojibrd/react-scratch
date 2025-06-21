@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './{{pascalCase name}}.module.css';
+import styles from './{{pascalCase name}}.module.scss';
 
 interface {{pascalCase name}}Props {
   // define your props here

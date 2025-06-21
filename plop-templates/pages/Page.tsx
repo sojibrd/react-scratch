@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./{{pascalCase name}}.module.css";
+import styles from "./{{pascalCase name}}.module.scss";
 
 const {{pascalCase name}}: React.FC = () => {
   return (
