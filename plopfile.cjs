@@ -49,8 +49,8 @@ module.exports = function (plop) {
         },
         {
           type: "add",
-          path: `${basePath}/{{name}}.module.css`,
-          templateFile: "plop-templates/components/component.module.css",
+          path: `${basePath}/{{name}}.module.scss`,
+          templateFile: "plop-templates/components/component.module.scss",
         },
         {
           type: "add",
@@ -79,8 +79,8 @@ module.exports = function (plop) {
       },
       {
         type: "add",
-        path: "src/pages/{{pascalCase name}}/{{pascalCase name}}.module.css",
-        templateFile: "plop-templates/pages/Page.module.css",
+        path: "src/pages/{{pascalCase name}}/{{pascalCase name}}.module.scss",
+        templateFile: "plop-templates/pages/Page.module.scss",
       },
       {
         type: "append",
