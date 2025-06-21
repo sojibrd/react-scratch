@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Sell.module.css";
+import styles from "./Sell.module.scss";
 
 const Sell: React.FC = () => {
   return (

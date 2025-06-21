@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./GiftCards.module.css";
+import styles from "./GiftCards.module.scss";
 
 const GiftCards: React.FC = () => {
   return (

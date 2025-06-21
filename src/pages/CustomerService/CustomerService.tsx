@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./CustomerService.module.css";
+import styles from "./CustomerService.module.scss";
 
 const CustomerService: React.FC = () => {
   return (

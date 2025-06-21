@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./TodaysDeals.module.css";
+import styles from "./TodaysDeals.module.scss";
 
 const TodaysDeals: React.FC = () => {
   return (

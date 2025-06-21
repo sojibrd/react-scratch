@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./PrimeVideo.module.css";
+import styles from "./PrimeVideo.module.scss";
 
 const PrimeVideo: React.FC = () => {
   return (
