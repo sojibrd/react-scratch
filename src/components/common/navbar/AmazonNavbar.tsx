@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import styles from "./amazonNavbar.module.css";
+import styles from "./AmazonNavbar.module.scss";
 import { Link, useLocation } from "react-router-dom";
 import Sidebar from "../sidebar/Sidebar";
 import {

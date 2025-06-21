@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./sidebar.module.css";
+import styles from "./sidebar.module.scss";
 
 const digitalContentDefault = [
   { label: "Prime Video", submenu: "primeVideo" },
