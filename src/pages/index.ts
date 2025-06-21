@@ -11,3 +11,5 @@ export { default as GiftCards } from "./GiftCards/GiftCards";
 export { default as CustomerService } from "./CustomerService/CustomerService";
 
 export { default as Sell } from "./Sell/Sell";
+
+export { default as NotFound } from "./NotFound/NotFound";

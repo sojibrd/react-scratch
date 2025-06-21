@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import {
   CustomerService,
   GiftCards,
@@ -7,11 +12,11 @@ import {
   Registry,
   Sell,
   TodaysDeals,
+  NotFound,
 } from "./pages";
 import MainLayout from "./layouts/MainLayout";
 import AdminLayout from "./layouts/AdminLayout";
 import AuthLayout from "./layouts/AuthLayout";
-import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -26,7 +31,10 @@ function App() {
           <Route path="/customer-service" element={<CustomerService />} />
           <Route path="/sell" element={<Sell />} />
           {/* Redirect example: old deals path to new */}
-          <Route path="/deals" element={<Navigate to="/todays-deals" replace />} />
+          <Route
+            path="/deals"
+            element={<Navigate to="/todays-deals" replace />}
+          />
         </Route>
         {/* Example admin and auth routes: */}
         <Route path="/admin/*" element={<AdminLayout />}>
