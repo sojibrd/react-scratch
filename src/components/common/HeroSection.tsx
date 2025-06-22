@@ -1,6 +1,6 @@
 import React from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import styles from "../../pages/Home/home.module.scss";
+import styles from "../../pages/Home/Home.module.scss";
 
 interface HeroSectionProps {
   title: string;

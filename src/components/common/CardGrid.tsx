@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import styles from "../../pages/Home/home.module.scss";
+import styles from "../../pages/Home/Home.module.scss";
 import { CardVariant1, CardVariant2, CardVariant3 } from "../cards";
 
 interface CardGridProps {
