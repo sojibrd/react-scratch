@@ -9,7 +9,6 @@ import {
   topPicksBangladeshCarousel,
   bestSellersClothingCarousel,
   internationalTopSellersKitchenCarousel,
-  popularBeautyInternationalCarousel,
   bestSellersSportsOutdoorsCarousel,
 } from "../../constants/carousels";
 

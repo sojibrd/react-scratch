@@ -1,42 +1,61 @@
 import React, { useState } from "react";
 import styles from "./sidebar.module.scss";
 
-const digitalContentDefault = [
+// Define a type for sidebar items with optional properties
+interface SidebarItem {
+  label: string;
+  submenu?: string;
+  icon?: string;
+  selected?: boolean;
+}
+
+const digitalContentDefault: SidebarItem[] = [
   { label: "Prime Video", submenu: "primeVideo" },
   { label: "Amazon Music", submenu: "amazonMusic" },
   { label: "Kindle E-readers & Books", submenu: "kindle" },
   { label: "Amazon Appstore", submenu: "appstore" },
 ];
-const digitalContentAll = [
+const digitalContentAll: SidebarItem[] = [
   ...digitalContentDefault,
   { label: "Audible Audiobooks" },
   { label: "Amazon Photos" },
 ];
 
-const shopByDepartmentDefault = [
+const shopByDepartmentDefault: SidebarItem[] = [
   { label: "Electronics", submenu: "electronics" },
   { label: "Computers", submenu: "computers" },
   { label: "Smart Home", submenu: "smartHome" },
   { label: "Arts & Crafts", submenu: "artsCrafts" },
 ];
-const shopByDepartmentAll = [
+const shopByDepartmentAll: SidebarItem[] = [
   ...shopByDepartmentDefault,
   { label: "Toys & Games" },
   { label: "Sports & Outdoors" },
   { label: "Automotive" },
 ];
 
-const helpSettingsDefault = [
+const helpSettingsDefault: SidebarItem[] = [
   { label: "Your Account" },
   { label: "English", icon: "🌐" },
   { label: "United States", icon: "🇺🇸" },
   { label: "Customer Service" },
   { label: "Sign Out" },
 ];
-const helpSettingsAll = [
+const helpSettingsAll: SidebarItem[] = [
   ...helpSettingsDefault,
   { label: "Accessibility" },
   { label: "Feedback" },
+];
+
+const programsFeaturesDefault: SidebarItem[] = [
+  { label: "Gift Cards", submenu: "giftCards" },
+  { label: "Shop By Interest", submenu: "shopByInterest" },
+  { label: "Amazon Live", submenu: "amazonLive" },
+  { label: "International Shopping", submenu: "internationalShopping" },
+];
+const programsFeaturesAll: SidebarItem[] = [
+  ...programsFeaturesDefault,
+  { label: "Amazon Second Chance" },
 ];
 
 const submenuData: Record<string, { title: string; options: string[] }> = {
@@ -144,23 +163,12 @@ const submenuData: Record<string, { title: string; options: string[] }> = {
   },
 };
 
-const programsFeaturesDefault = [
-  { label: "Gift Cards", submenu: "giftCards" },
-  { label: "Shop By Interest", submenu: "shopByInterest" },
-  { label: "Amazon Live", submenu: "amazonLive" },
-  { label: "International Shopping", submenu: "internationalShopping" },
-];
-const programsFeaturesAll = [
-  ...programsFeaturesDefault,
-  { label: "Amazon Second Chance" },
-];
-
 const Sidebar: React.FC<{ onClose: () => void }> = ({ onClose }) => {
   const [submenu, setSubmenu] = useState<string | null>(null);
   const [showAllPrograms, setShowAllPrograms] = useState(false);
   const [showAllDigital, setShowAllDigital] = useState(false);
   const [showAllDepartment, setShowAllDepartment] = useState(false);
-  const [showAllHelp, setShowAllHelp] = useState(false);
+  const [showAllHelp] = useState(false);
 
   // Main menu content
   const mainMenu = (

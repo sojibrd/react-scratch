@@ -22,7 +22,7 @@ const AmazonNavbar: React.FC = () => {
   const { theme, toggleTheme } = React.useContext(ThemeContext);
 
   // Handler for dropdown selection
-  const handleDropdownChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+  const handleDropdownChange = () => {
     setDropdownBlur(true);
   };
 
